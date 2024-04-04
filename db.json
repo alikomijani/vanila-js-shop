@@ -4,7 +4,7 @@
             "id": "1",
             "name": "Samsung Galaxy S23 FE ",
             "details": "گوشی موبایل سامسونگ مدل Galaxy S23 FE",
-            "price": 25199000,
+            "price": 34199000,
             "image": "https://dkstatics-public.digikala.com/digikala-products/bd7648d55ffe49a0596ac3668f4db41f7c790f6a_1696760508.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
         },
         {
@@ -56,23 +56,12 @@
             "lastName": "Komijani"
         }
     ],
-    "baskets": [
+    "basketItems": [
         {
             "id": "1",
-            "user": "1",
-            "items": [
-                {
-                    "id": "1",
-                    "product": {
-                        "id": "1",
-                        "name": "Samsung Galaxy S23 FE ",
-                        "details": "گوشی موبایل سامسونگ مدل Galaxy S23 FE",
-                        "price": 25199000,
-                        "image": "https://dkstatics-public.digikala.com/digikala-products/bd7648d55ffe49a0596ac3668f4db41f7c790f6a_1696760508.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
-                    },
-                    "quantity": 5
-                }
-            ]
+            "userId": "1",
+            "productId": "1",
+            "quantity": 4
         }
     ]
 }
