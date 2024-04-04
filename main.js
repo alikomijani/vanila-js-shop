@@ -1,6 +1,3 @@
 import "./style.css";
-import HomePage from "./src/pages/Home";
-
-const app = document.querySelector("#app");
-
-app?.append(HomePage());
+import { Router } from "./src/routes/router";
+Router().resolve();
