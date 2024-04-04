@@ -1,0 +1,78 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Samsung Galaxy S23 FE ",
+            "details": "گوشی موبایل سامسونگ مدل Galaxy S23 FE",
+            "price": 25199000,
+            "image": "https://dkstatics-public.digikala.com/digikala-products/bd7648d55ffe49a0596ac3668f4db41f7c790f6a_1696760508.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+        },
+        {
+            "id": "2",
+            "name": "Samsung Galaxy A54 5G Dual SIM",
+            "details": "گوشی موبایل سامسونگ مدل Galaxy A54 5G",
+            "price": 17100000,
+            "image": "https://dkstatics-public.digikala.com/digikala-products/f1c52ab36a753464bb6a17919f6b3f781acc44b5_1684135768.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+        },
+        {
+            "id": "3",
+            "name": "amsung Galaxy A34 5G Dual SIM",
+            "details": "گوشی موبایل سامسونگ مدل Galaxy A34 5G",
+            "image": "https://dkstatics-public.digikala.com/digikala-products/1fafefa0ce8c0e6af33566ca8ac89c3893a65d17_1684153138.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+            "price": 20199000
+        },
+        {
+            "id": "4",
+            "name": "Samsung Galaxy A14 Dual SIM",
+            "details": "گوشی موبایل سامسونگ مدل Galaxy A14",
+            "image": "https://dkstatics-public.digikala.com/digikala-products/373cf0add6b2964b30a9a59b2ce2f5f2c8ea976f_1679736819.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+            "price": 15199000
+        },
+        {
+            "id": "5",
+            "details": "گوشی موبایل نوکیا مدل 8210 4G",
+            "name": "Nokia 8210 4G Dual",
+            "price": 199000,
+            "image": "https://dkstatics-public.digikala.com/digikala-products/bdeb8166337e67ed7b26f7ad75b6410ff598384c_1665836967.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+        }
+    ],
+    "comments": [
+        {
+            "id": "1",
+            "text": "a comment about post 1",
+            "productId": "1"
+        },
+        {
+            "id": "2",
+            "text": "another comment about post 1",
+            "productId": "1"
+        }
+    ],
+    "users": [
+        {
+            "id": "1",
+            "username": "komij",
+            "name": "Ali",
+            "lastName": "Komijani"
+        }
+    ],
+    "baskets": [
+        {
+            "id": "1",
+            "user": "1",
+            "items": [
+                {
+                    "id": "1",
+                    "product": {
+                        "id": "1",
+                        "name": "Samsung Galaxy S23 FE ",
+                        "details": "گوشی موبایل سامسونگ مدل Galaxy S23 FE",
+                        "price": 25199000,
+                        "image": "https://dkstatics-public.digikala.com/digikala-products/bd7648d55ffe49a0596ac3668f4db41f7c790f6a_1696760508.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                    },
+                    "quantity": 5
+                }
+            ]
+        }
+    ]
+}
