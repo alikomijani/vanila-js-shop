@@ -15,7 +15,7 @@ export function Product(data) {
 function createProductPage(product) {
   return El({
     element: "div",
-    className: "flex gap-5",
+    className: "flex gap-5 justify-between mb-5",
     children: [
       El({
         element: "img",
