@@ -1,8 +1,16 @@
-import { El } from "@/utils/createElement";
-
+import { El } from "@/utils";
+import { getProducts } from "@/api/products";
+import { ProductCard } from "@/components/product-card/product-card";
 export default function Home() {
-  return El({
+  const Element = El({
     element: "div",
-    innerText: "welcome to home page",
+    className: "flex gap-5 my-2",
   });
+  getProducts().then((products) => {
+    products.forEach((product) => {
+      const productCard = ProductCard({ ...product });
+      Element.append(productCard);
+    });
+  });
+  return Element;
 }

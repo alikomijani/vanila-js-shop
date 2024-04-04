@@ -1,4 +1,4 @@
-import { El } from "@/utils/createElement";
+import { El } from "@/utils";
 import { Header } from "./header/header";
 import { Footer } from "./footer/footer";
 

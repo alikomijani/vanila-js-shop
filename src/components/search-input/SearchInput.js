@@ -1,4 +1,4 @@
-import { El } from "@/utils/createElement";
+import { El } from "@/utils";
 
 export function SearchInput() {
   return El({

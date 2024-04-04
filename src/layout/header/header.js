@@ -1,4 +1,4 @@
-import { El } from "@/utils/createElement";
+import { El } from "@/utils";
 import { Logo, SearchInput } from "@/components";
 export function Header() {
   return El({
