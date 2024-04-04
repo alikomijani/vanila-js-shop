@@ -10,7 +10,7 @@ export const Router = () => {
     .on("/", () => {
       changePage(HomePage);
     })
-    .on("/product/:id", ({ data }) => {
+    .on("/products/:id", ({ data }) => {
       changePage(ProductPage, data);
     });
   return router;
