@@ -1,6 +1,6 @@
 import { El } from "@/utils";
 import { getProducts } from "@/api/products";
-import { ProductCard } from "@/components/product-card/product-card";
+import { ProductCard } from "@/components";
 export default function Home() {
   const Element = El({
     element: "div",
