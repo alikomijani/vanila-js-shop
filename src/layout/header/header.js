@@ -3,7 +3,7 @@ import { Logo, SearchInput } from "@/components";
 export function Header() {
   return El({
     element: "div",
-    className: "p-1 container mx-auto flex justify-between items-center",
+    className: "p-1 py-5 container mx-auto flex justify-between items-center",
     children: [
       El({
         element: "div",
