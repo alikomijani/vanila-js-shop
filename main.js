@@ -1,2 +1,6 @@
 import "./style.css";
-document.querySelector("#app").innerHTML = ``;
+import HomePage from "./src/pages/Home";
+
+const app = document.querySelector("#app");
+
+app?.append(HomePage());
