@@ -8,8 +8,7 @@ export function Logo() {
     children: [
       El({
         element: "img",
-        src: "https://www.digikala.com/statics/img/svg/logo.svg",
-        //src :logo
+        src: logo,
       }),
     ],
   });
