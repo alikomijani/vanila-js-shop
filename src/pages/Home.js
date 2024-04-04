@@ -5,6 +5,6 @@ export default function HomePage() {
   document.title = "home page";
   return El({
     element: "div",
-    children: [Layout(Home)],
+    children: [Layout(Home())],
   });
 }

@@ -10,7 +10,7 @@ export function Layout(main) {
       El({
         element: "main",
         className: "container mx-auto",
-        children: [main()],
+        children: [main],
       }),
       Footer(),
     ],

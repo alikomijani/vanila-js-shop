@@ -10,8 +10,8 @@ export const Router = () => {
     .on("/", () => {
       changePage(HomePage);
     })
-    .on("/product/:id", () => {
-      changePage(ProductPage);
+    .on("/product/:id", ({ data }) => {
+      changePage(ProductPage, data);
     });
   return router;
 };

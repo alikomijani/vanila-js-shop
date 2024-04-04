@@ -1,5 +1,5 @@
-export function changePage(page) {
+export function changePage(page, data) {
   const app = document.getElementById("app");
   app.innerHTML = "";
-  app.appendChild(page());
+  app.appendChild(page(data));
 }
