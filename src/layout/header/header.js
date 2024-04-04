@@ -3,7 +3,7 @@ import { Logo, SearchInput } from "@/components";
 export function Header() {
   return El({
     element: "div",
-    className: "flex",
+    className: "p-1 container mx-auto flex justify-between items-center",
     children: [
       El({
         element: "div",
@@ -15,7 +15,7 @@ export function Header() {
         children: [
           El({
             element: "span",
-            className: "icon-[ic--outline-shopping-cart]",
+            className: "icon-[ic--outline-shopping-cart] text-4xl",
           }),
         ],
       }),

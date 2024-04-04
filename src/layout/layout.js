@@ -5,6 +5,14 @@ import { Footer } from "./footer/footer";
 export function Layout(main) {
   return El({
     element: "div",
-    children: [Header(), main(), Footer()],
+    children: [
+      Header(),
+      El({
+        element: "main",
+        className: "container mx-auto",
+        children: [main()],
+      }),
+      Footer(),
+    ],
   });
 }
