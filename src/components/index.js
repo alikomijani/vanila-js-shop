@@ -5,3 +5,4 @@ export * from "./button/Button";
 export * from "./buy-section-card/buy-section-card";
 export * from "./comment/comment";
 export * from "./link/link";
+export * from "./badge/badge";
