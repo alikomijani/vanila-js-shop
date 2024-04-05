@@ -1,4 +1,4 @@
-import { El } from "@/utils";
+import { El, increaseProductQuantity } from "@/utils";
 import { Button } from "../button/Button";
 
 export function BuySectionCard({ product }) {
@@ -20,7 +20,17 @@ export function BuySectionCard({ product }) {
           }),
         ],
       }),
-      Button({ text: "افزودن به سبد خرید" }),
+      Button({
+        text: "افزودن به سبد خرید",
+        eventListener: [
+          {
+            event: "click",
+            callback: () => {
+              increaseProductQuantity(product);
+            },
+          },
+        ],
+      }),
     ],
   });
 }
