@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000";
+import { baseUrl } from "./config";
 
 export async function getProducts() {
   const response = await fetch(`${baseUrl}/products`);
