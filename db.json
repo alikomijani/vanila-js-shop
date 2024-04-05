@@ -39,21 +39,23 @@
     "comments": [
         {
             "id": "1",
-            "text": "a comment about post 1",
-            "productId": "1"
+            "text": "خیلی محصول خوبی بود.",
+            "productId": "1",
+            "userId": "1"
         },
         {
             "id": "2",
-            "text": "another comment about post 1",
-            "productId": "1"
+            "text": "خیلی محصول بدی بود!",
+            "productId": "1",
+            "userId": "1"
         }
     ],
     "users": [
         {
             "id": "1",
             "username": "komij",
-            "name": "Ali",
-            "lastName": "Komijani"
+            "name": "علی",
+            "lastName": "کمیجانی"
         }
     ],
     "basketItems": [
