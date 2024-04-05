@@ -1,6 +1,7 @@
 import { El } from "@/utils";
 
-export function ProductCard({ id, name, details, price, image, className }) {
+export function ProductCard({ product, className }) {
+  const { id, name, details, price, image } = product;
   return El({
     element: "a",
     href: `/products/${id}`,

@@ -1,14 +1,15 @@
 import { getProductById } from "@/api/products";
-import { ProductDetails, ProductComments } from "@/widget";
+import { ProductDetails, ProductComments, CommentForm } from "@/widget";
 import { El } from "@/utils";
 import { getCommentsByProductId } from "@/api/comments";
 
 export function Product(data) {
-  getProductById(data.id).then((product) => {
+  const productId = data.id;
+  getProductById(productId).then((product) => {
     element
       .querySelector("#product-details")
       .append(ProductDetails({ product }));
-    getCommentsByProductId(data.id).then((comments) => {
+    getCommentsByProductId(productId).then((comments) => {
       element
         .querySelector("#comments-details")
         .append(ProductComments({ comments }));
@@ -19,6 +20,17 @@ export function Product(data) {
     children: [
       El({ element: "div", id: "product-details" }),
       El({ element: "div", id: "comments-details" }),
+      El({
+        element: "div",
+        id: "comment-form",
+        className: "md:w-1/2 m-6",
+        children: [
+          CommentForm({
+            productId,
+            querySelectorString: "#comments-details>ul",
+          }),
+        ],
+      }),
     ],
   });
   // Promise.all([getProductById(data.id), getCommentsByProductId(data.id)]).then(

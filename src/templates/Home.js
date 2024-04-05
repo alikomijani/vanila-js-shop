@@ -8,7 +8,7 @@ export default function Home() {
   });
   getProducts().then((products) => {
     products.forEach((product) => {
-      const productCard = ProductCard({ ...product });
+      const productCard = ProductCard({ product });
       Element.append(productCard);
     });
   });

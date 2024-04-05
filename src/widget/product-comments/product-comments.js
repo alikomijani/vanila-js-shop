@@ -1,23 +1,9 @@
 import { El } from "@/utils";
+import { Comment } from "@/components";
 
 export function ProductComments({ comments }) {
   return El({
     element: "ul",
-    children: comments.map((comment) =>
-      El({
-        element: "li",
-        className: "p-4 border-b",
-        children: [
-          El({
-            element: "div",
-            innerText: `${comment.user.name} ${comment.user.lastName}`,
-          }),
-          El({
-            element: "div",
-            innerText: comment.text,
-          }),
-        ],
-      })
-    ),
+    children: comments.map((comment) => Comment({ comment })),
   });
 }
