@@ -1,9 +1,8 @@
 import { El } from "@/utils";
-
+import { Link } from "../link/link";
 export function ProductCard({ product, className }) {
   const { id, name, details, price, image } = product;
-  return El({
-    element: "a",
+  return Link({
     href: `/products/${id}`,
     className,
     children: [

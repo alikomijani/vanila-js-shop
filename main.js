@@ -1,3 +1,3 @@
 import "./style.css";
-import { Router } from "./src/routes/router";
-Router().resolve();
+import { router } from "./src/routes/router";
+router.resolve();
