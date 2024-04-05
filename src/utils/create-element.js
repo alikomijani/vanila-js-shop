@@ -4,6 +4,7 @@ export function El({
   eventListener,
   dataset,
   restAttrs = {},
+  className = "",
   ...rest
 }) {
   const elem = document.createElement(element);
@@ -26,5 +27,6 @@ export function El({
   for (const key in restAttrs) {
     elem.setAttribute(key, restAttrs[key]);
   }
+  elem.setAttribute("class", className);
   return elem;
 }
