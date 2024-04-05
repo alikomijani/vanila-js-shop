@@ -1,5 +1,5 @@
-import { El } from "@/utils";
-import { Logo, SearchInput, Link } from "@/components";
+import { El, getCartItemCount } from "@/utils";
+import { Logo, SearchInput, Link, Badge } from "@/components";
 export function Header() {
   return El({
     element: "div",
@@ -12,10 +12,15 @@ export function Header() {
       }),
       Link({
         href: "/cart",
+        className: "block",
         children: [
-          El({
-            element: "span",
-            className: "icon-[ic--outline-shopping-cart] text-4xl",
+          Badge({
+            id: "cart-count-badge",
+            text: getCartItemCount(),
+            child: El({
+              element: "span",
+              className: "icon-[ic--outline-shopping-cart] text-4xl",
+            }),
           }),
         ],
       }),
