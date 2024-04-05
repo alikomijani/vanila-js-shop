@@ -1,5 +1,6 @@
 import { El, getCartItemCount } from "@/utils";
-import { Logo, SearchInput, Link, Badge } from "@/components";
+import { Logo, SearchInput, Link, Badge, Popover } from "@/components";
+import { CartWrapper } from "@/widget";
 export function Header() {
   return El({
     element: "div",
@@ -10,19 +11,22 @@ export function Header() {
         className: "flex gap-1",
         children: [Logo(), SearchInput()],
       }),
-      Link({
-        href: "/cart",
-        className: "block",
-        children: [
-          Badge({
-            id: "cart-count-badge",
-            text: getCartItemCount(),
-            child: El({
-              element: "span",
-              className: "icon-[ic--outline-shopping-cart] text-4xl",
-            }),
+
+      Popover({
+        parent: Badge({
+          id: "cart-count-badge",
+          text: getCartItemCount(),
+          child: Link({
+            href: "/cart",
+            children: [
+              El({
+                element: "span",
+                className: "icon-[ic--outline-shopping-cart] text-4xl",
+              }),
+            ],
           }),
-        ],
+        }),
+        child: CartWrapper(),
       }),
     ],
   });
