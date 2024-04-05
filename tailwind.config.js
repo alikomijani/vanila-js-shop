@@ -5,5 +5,5 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [addDynamicIconSelectors()],
+  plugins: [addDynamicIconSelectors(), require("@tailwindcss/forms")],
 };
