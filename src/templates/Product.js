@@ -1,62 +1,33 @@
 import { getProductById } from "@/api/products";
-import { Button } from "@/components";
+import { ProductDetails, ProductComments } from "@/widget";
 import { El } from "@/utils";
+import { getCommentsByProductId } from "@/api/comments";
 
 export function Product(data) {
   getProductById(data.id).then((product) => {
-    const child = createProductPage(product);
-    Element.innerText = "";
-    Element.append(child);
+    element
+      .querySelector("#product-details")
+      .append(ProductDetails({ product }));
+    getCommentsByProductId(data.id).then((comments) => {
+      element
+        .querySelector("#comments-details")
+        .append(ProductComments({ comments }));
+    });
   });
-  const Element = El({ element: "div", innerText: " در انتظار پاسخ سرور " });
-  return Element;
-}
-
-function createProductPage(product) {
-  return El({
+  const element = El({
     element: "div",
-    className: "flex gap-5 justify-between mb-5",
     children: [
-      El({
-        element: "img",
-        src: product.image,
-        width: 500,
-      }),
-      El({
-        element: "div",
-        children: [
-          El({
-            element: "h1",
-            className: "text-2xl",
-            innerText: product.details,
-          }),
-          El({
-            element: "h3",
-            innerText: product.name,
-          }),
-        ],
-      }),
-      El({
-        element: "div",
-        className: "border rounded-md bg-gray-100 p-2 w-1/4",
-        children: [
-          El({
-            element: "div",
-            className: "flex justify-between my-2",
-            children: [
-              El({
-                element: "p",
-                innerText: "قیمت",
-              }),
-              El({
-                element: "p",
-                innerText: product.price,
-              }),
-            ],
-          }),
-          Button({ text: "افزودن به سبد خرید" }),
-        ],
-      }),
+      El({ element: "div", id: "product-details" }),
+      El({ element: "div", id: "comments-details" }),
     ],
   });
+  // Promise.all([getProductById(data.id), getCommentsByProductId(data.id)]).then(
+  //   (values) => {
+  //     element.append(
+  //       ProductDetails({ product: values[0] }),
+  //       ProductComments({ comments: values[1] })
+  //     );
+  //   }
+  // );
+  return element;
 }
