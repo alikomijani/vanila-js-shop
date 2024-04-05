@@ -7,3 +7,4 @@ export * from "./comment/comment";
 export * from "./link/link";
 export * from "./badge/badge";
 export * from "./popover/popover";
+export * from "./cart-item/cart-item";
