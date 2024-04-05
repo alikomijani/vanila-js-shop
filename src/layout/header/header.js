@@ -1,5 +1,5 @@
 import { El } from "@/utils";
-import { Logo, SearchInput } from "@/components";
+import { Logo, SearchInput, Link } from "@/components";
 export function Header() {
   return El({
     element: "div",
@@ -10,8 +10,8 @@ export function Header() {
         className: "flex gap-1",
         children: [Logo(), SearchInput()],
       }),
-      El({
-        element: "div",
+      Link({
+        href: "/cart",
         children: [
           El({
             element: "span",
