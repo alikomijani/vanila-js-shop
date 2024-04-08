@@ -1,19 +1,15 @@
-const PRODUCT_KEY = "cart_v1";
-
+export const PRODUCT_KEY = "cart_v1";
+import storage from "./storage";
+import observer from "./observer";
 export function getCartItems() {
-  const rawCartItems = localStorage.getItem(PRODUCT_KEY);
-  if (!rawCartItems) {
-    localStorage.setItem(PRODUCT_KEY, JSON.stringify([]));
-    return [];
-  }
   try {
-    const cartItems = JSON.parse(rawCartItems);
+    const cartItems = storage.get(PRODUCT_KEY);
     if (!Array.isArray(cartItems)) {
       throw new Error(`bad data is stored in ${PRODUCT_KEY}`);
     }
     return cartItems;
   } catch {
-    localStorage.setItem(PRODUCT_KEY, JSON.stringify([]));
+    storage.set(PRODUCT_KEY, []);
     return [];
   }
 }
@@ -27,7 +23,8 @@ export function increaseProductQuantity(product) {
     cartItems[index].quantity++;
     result = cartItems[index].quantity;
   }
-  localStorage.setItem(PRODUCT_KEY, JSON.stringify(cartItems));
+  storage.set(PRODUCT_KEY, cartItems);
+  observer.notify(cartItems);
   getCartItemCount();
   return result;
 }
@@ -44,7 +41,8 @@ export function decreaseProductQuantity(product) {
   } else {
     cartItems.splice(index, 1);
   }
-  localStorage.setItem(PRODUCT_KEY, JSON.stringify(cartItems));
+  storage.set(PRODUCT_KEY, cartItems);
+  observer.notify(cartItems);
   getCartItemCount();
   return result;
 }
